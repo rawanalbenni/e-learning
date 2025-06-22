@@ -19,14 +19,15 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
         return;
     }
 
-    // if (!passwordRegex.test(password)) {
-    //     Swal.fire("Error!", "Password must contain uppercase, lowercase, number, and special character!", "error");
-    //     return;
-    // }
+    if (!passwordRegex.test(password)) {
+        Swal.fire("Error!", "Password must contain uppercase, lowercase, number, and special character!", "error");
+        return;
+    }
 
     localStorage.setItem("user", JSON.stringify({ name, email }));
 
     Swal.fire("Success!", "Registration Successful!", "success").then(() => {
-        window.location.href = "index.html";
+        console.log("succsesssss");
+        window.location.href ="home.html";
     });
 });
