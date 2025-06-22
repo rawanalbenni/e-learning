@@ -27,6 +27,6 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     localStorage.setItem("user", JSON.stringify({ name, email }));
 
     Swal.fire("Success!", "Registration Successful!", "success").then(() => {
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
     });
 });
